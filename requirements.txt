@@ -1,1 +1,2 @@
 paho-mqtt
+azure-iot-device

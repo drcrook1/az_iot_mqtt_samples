@@ -22,4 +22,4 @@ RUN chmod -x /leafdevice/run.py
 # the application rather than buffering it.
 ENV PYTHONUNBUFFERED 1
 
-CMD ["python", "/leafdevice/run.py"]
+CMD ["python", "/leafdevice/protocol_gateway.py"]

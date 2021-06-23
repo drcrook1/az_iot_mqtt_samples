@@ -22,8 +22,9 @@ def create_client():
     client = mqtt.Client()
     client.on_connect = on_connect
     client.on_message = on_message
-    token = str(sastoken.SasToken(uri = os.environ["IOT_HUB_HOST"], key = os.environ["IOT_HUB_SHARED_ACCESS_KEY"]))
-    user_name = os.environ["IOT_HUB_HOST"] + '/' + os.environ["DEVICE_ID"] + '/?api-version=2018-06-30'
+    #token = str(sastoken.SasToken(uri = os.environ["IOT_HUB_HOST"], key = os.environ["IOT_HUB_SHARED_ACCESS_KEY"]))
+    token = "SharedAccessSignature sr=dacrooktest1.azure-devices.net%2Fdevices%2Fdevice1&sig=jGrhNQse%2Fv14yF9%2Bk0JUDhSx4d8JsFCFPOl7e4Oidwk%3D&se=1624382522"
+    user_name = os.environ["IOT_HUB_HOST"] + '/' + os.environ["DEVICE_ID"]
     print(user_name)
     print(token)
     client.username_pw_set(user_name, token)
@@ -44,7 +45,6 @@ def run_mqtt_sample(client = None):
             print("Unexpected error")
             time.sleep(4)
     return None
-
 
 if __name__ == '__main__':
     client = create_client()
