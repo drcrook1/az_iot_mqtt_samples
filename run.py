@@ -23,7 +23,7 @@ def create_client():
     client.on_connect = on_connect
     client.on_message = on_message
     #token = str(sastoken.SasToken(uri = os.environ["IOT_HUB_HOST"], key = os.environ["IOT_HUB_SHARED_ACCESS_KEY"]))
-    token = "SharedAccessSignature sr=dacrooktest1.azure-devices.net%2Fdevices%2Fdevice1&sig=jGrhNQse%2Fv14yF9%2Bk0JUDhSx4d8JsFCFPOl7e4Oidwk%3D&se=1624382522"
+    token = "YOURS"
     user_name = os.environ["IOT_HUB_HOST"] + '/' + os.environ["DEVICE_ID"]
     print(user_name)
     print(token)

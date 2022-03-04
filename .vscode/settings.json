@@ -1,0 +1,13 @@
+{
+    "debug.internalConsoleOptions": "neverOpen",
+    "python.testing.pytestArgs": [
+      "--verbose",
+      "--rootdir",
+      "${workspaceFolder}",
+      "${workspaceFolder}/tests"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.envFile": "${workspaceFolder}/dev.env"
+  }
+  

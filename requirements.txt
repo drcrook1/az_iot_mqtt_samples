@@ -1,2 +1,4 @@
 paho-mqtt
 azure-iot-device
+requests
+urllib

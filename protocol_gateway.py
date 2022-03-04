@@ -6,11 +6,13 @@ import asyncio
 import random
 import logging
 import json
+import requests
 
 from azure.iot.device.aio import IoTHubDeviceClient
 from azure.iot.device.aio import ProvisioningDeviceClient
 from azure.iot.device import constant, Message, MethodResponse
 from datetime import date, timedelta, datetime
+import base64
 
 # CONNECTION_STRING = os.environ["CONNECTION_STRING"]
 DEVICE_LIST = json.loads(os.environ["DEVICE_LIST"])
