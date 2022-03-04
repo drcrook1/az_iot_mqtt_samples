@@ -107,7 +107,7 @@ def iothub_client_init(conn_str = None):
     return client
 
 async def configure_device_client():
-    conn_str = get_iothub_conn_str(dps_scope_id = "0ne00428668", device_key = "vqtB9rWiZm38VLj5E/u014sZlgtqoPWZyNAVBluFJyM=", device_id = "19br1otrp04")
+    conn_str = get_iothub_conn_str(dps_scope_id = "YOURS", device_key = "YOURS", device_id = "YOURS")
     global DEVICE_CLIENT
     DEVICE_CLIENT = iothub_client_init(conn_str=conn_str)
     await DEVICE_CLIENT.connect()
